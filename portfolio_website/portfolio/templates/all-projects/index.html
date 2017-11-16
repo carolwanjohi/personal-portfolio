@@ -1,9 +1,29 @@
 {% extends 'all-projects/base.html' %}
 
 {% block content %}
-    {{block.super}}
 
+    {{block.super}}
     <div class="container">
-        <h1 class="text-center">{{message}}</h1>
+
+        <div class="row">
+
+            {% for project in projects %}
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+                    <h2>
+                        {{project}}
+                    </h2>
+                    
+                </div>
+
+            {% empty %}
+
+                <h2 class="text-center">
+                    There are no projects to display
+                </h2>
+
+            {% endfor %}
+
+        </div>
     </div>
 {% endblock %}
