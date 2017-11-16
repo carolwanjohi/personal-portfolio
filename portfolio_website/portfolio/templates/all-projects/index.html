@@ -11,7 +11,17 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 
                     <h2>
-                        {{project}}
+                        
+                        <a href="{% url 'project' project.id %}">   
+                            {{project.name}}
+                        </a>
+
+                        <br>
+
+                        <small>
+                            by {{project.creator.first_name}} {{project.creator.last_name}}
+                        </small>
+
                     </h2>
                     
                 </div>
