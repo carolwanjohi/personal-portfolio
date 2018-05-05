@@ -47,6 +47,7 @@ class Project(models.Model):
     git_hub_link = models.CharField(max_length=255)
     deployed_link = models.CharField(max_length=255)
     creator = models.ForeignKey(Creator, on_delete=models.CASCADE)
+    project_image = models.ImageField(upload_to='projects/', null=True)
 
     def __str__(self):
         return self.name

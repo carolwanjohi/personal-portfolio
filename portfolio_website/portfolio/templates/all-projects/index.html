@@ -3,7 +3,7 @@
 {% block content %}
 
     {{block.super}}
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
 
@@ -12,15 +12,14 @@
 
                     <h2>
                         
-                        <a href="{% url 'project' project.id %}">   
-                            {{project.name}}
+                        <a href="{% url 'project' project.id %}"> 
+
+
+                            <img src="{{project.project_image.url}}" alt="Project Screenshot"searchl>  
+
+                            <br>
+
                         </a>
-
-                        <br>
-
-                        <small>
-                            by {{project.creator.first_name}} {{project.creator.last_name}}
-                        </small>
 
                     </h2>
                     
