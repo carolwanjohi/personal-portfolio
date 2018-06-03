@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfolio_website',
-        'USER': ,
-        'PASSWORD': ,
+        'USER': config('USER'),
+        'PASSWORD': config('PASSWORD'),
     }
 }
 
